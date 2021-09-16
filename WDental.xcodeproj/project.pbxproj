@@ -32,6 +32,7 @@
 		925851A326EFA90A00526849 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519126EFA90A00526849 /* Montserrat-Regular.ttf */; };
 		925851A426EFA90A00526849 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519226EFA90A00526849 /* Montserrat-Italic.ttf */; };
 		925851A526EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519326EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf */; };
+		92ED4AAB26F40A4C00C70D62 /* FirstAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */; };
 		F6737A963756D78CB1DA7C2A /* Pods_WDental.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63875507A5DC5A9F13065959 /* Pods_WDental.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		9258519126EFA90A00526849 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		9258519226EFA90A00526849 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		9258519326EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAccessViewController.swift; sourceTree = "<group>"; };
 		A1173A6DBB976540077ACCB7 /* Pods-WDental.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDental.release.xcconfig"; path = "Target Support Files/Pods-WDental/Pods-WDental.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +128,7 @@
 			children = (
 				9258516F26EF8B5800526849 /* ViewController.swift */,
 				921EB1C926F0E7FF00E087C8 /* WDentalViewController.swift */,
+				92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				921EB1CA26F0E7FF00E087C8 /* WDentalViewController.swift in Sources */,
 				9258517026EF8B5800526849 /* ViewController.swift in Sources */,
 				9258516C26EF8B5800526849 /* AppDelegate.swift in Sources */,
+				92ED4AAB26F40A4C00C70D62 /* FirstAccessViewController.swift in Sources */,
 				9258516E26EF8B5800526849 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
