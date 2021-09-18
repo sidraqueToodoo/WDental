@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		921EB1CA26F0E7FF00E087C8 /* WDentalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EB1C926F0E7FF00E087C8 /* WDentalViewController.swift */; };
+		923ADDFC26F61637008CAA99 /* ResendPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ADDFB26F61637008CAA99 /* ResendPasswordViewController.swift */; };
+		923ADE0026F657E8008CAA99 /* PasswordResentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ADDFF26F657E8008CAA99 /* PasswordResentViewController.swift */; };
 		9258516C26EF8B5800526849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258516B26EF8B5800526849 /* AppDelegate.swift */; };
 		9258516E26EF8B5800526849 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258516D26EF8B5800526849 /* SceneDelegate.swift */; };
 		9258517026EF8B5800526849 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258516F26EF8B5800526849 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 		63875507A5DC5A9F13065959 /* Pods_WDental.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDental.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75454DE65D720FF5A58E36A8 /* Pods-WDental.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDental.debug.xcconfig"; path = "Target Support Files/Pods-WDental/Pods-WDental.debug.xcconfig"; sourceTree = "<group>"; };
 		921EB1C926F0E7FF00E087C8 /* WDentalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDentalViewController.swift; sourceTree = "<group>"; };
+		923ADDFB26F61637008CAA99 /* ResendPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResendPasswordViewController.swift; sourceTree = "<group>"; };
+		923ADDFF26F657E8008CAA99 /* PasswordResentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResentViewController.swift; sourceTree = "<group>"; };
 		9258516826EF8B5800526849 /* WDental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9258516B26EF8B5800526849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9258516D26EF8B5800526849 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				9258516F26EF8B5800526849 /* ViewController.swift */,
 				921EB1C926F0E7FF00E087C8 /* WDentalViewController.swift */,
 				92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */,
+				923ADDFB26F61637008CAA99 /* ResendPasswordViewController.swift */,
+				923ADDFF26F657E8008CAA99 /* PasswordResentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -310,6 +316,8 @@
 				921EB1CA26F0E7FF00E087C8 /* WDentalViewController.swift in Sources */,
 				9258517026EF8B5800526849 /* ViewController.swift in Sources */,
 				9258516C26EF8B5800526849 /* AppDelegate.swift in Sources */,
+				923ADE0026F657E8008CAA99 /* PasswordResentViewController.swift in Sources */,
+				923ADDFC26F61637008CAA99 /* ResendPasswordViewController.swift in Sources */,
 				92ED4AAB26F40A4C00C70D62 /* FirstAccessViewController.swift in Sources */,
 				9258516E26EF8B5800526849 /* SceneDelegate.swift in Sources */,
 			);
