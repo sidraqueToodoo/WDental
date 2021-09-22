@@ -7,6 +7,6 @@ target 'WDental' do
 
   # Pods for WDental
   
-  pod 'Alamofire', '~> 5.4'
+  pod 'Alamofire', '~> 4.7'
 
 end

@@ -7,8 +7,10 @@
 
 import UIKit
 
-class WDentalViewController: UIViewController, UITextFieldDelegate{
+class LoginViewController: UIViewController, UITextFieldDelegate{
 
+    
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tfCpf: UITextField!{
         didSet{
             tfCpf.layer.borderColor = UIColor(red: 0.73, green: 0.73, blue: 0.73, alpha: 1.00).cgColor
@@ -43,13 +45,61 @@ class WDentalViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var lbCPF: UILabel!
     @IBOutlet weak var lbPassword: UILabel!
-
+    
+    // MARK: - Injection
+    let viewModel = LoginViewModel(dataService: DataService())
+    let service = DataService()
+    
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.hidesWhenStopped = true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
+    
+    // MARK: - Networking
+    
+    private func attemptFetchLogin(withId id: Int) {
+          viewModel.fetchLogin(withId: id)
+          
+          viewModel.updateLoadingStatus = {
+              let _ = self.viewModel.isLoading ? self.activityIndicatorStart() : self.activityIndicatorStop()
+          }
+          
+          viewModel.showAlertClosure = {
+              if let error = self.viewModel.error {
+                  print(error.localizedDescription)
+              }
+          }
+          
+          viewModel.didFinishFetch = {
+            print(self.viewModel.userID!)
+            print(self.viewModel.title!)
+            print(self.viewModel.body!)
+          }
+    }
+    
+    
+    // MARK: - UI Setup
+    private func activityIndicatorStart() {
+        activityIndicator.startAnimating()
+        print("start")
+    }
+    
+    private func activityIndicatorStop() {
+        performSegue(withIdentifier: "successfulSegue", sender: nil)
+        print("stop")
+    }
+    
+    
+    @IBAction func actionLogin(_ sender: UIButton) {
+        attemptFetchLogin(withId: 15)
+    }
+    
+    
+    
 
     @IBAction func forgotPasswordAndCpfClose(_ sender: UITextField) {
         if  tfPassword.text?.isEmpty == false {
