@@ -47,8 +47,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var lbPassword: UILabel!
     
     // MARK: - Injection
-    let viewModel = LoginViewModel(dataService: DataService())
-    let service = DataService()
+    let viewModel = LoginViewModel(dataService: DataService.shared)
     
     // MARK: - View life cycle
     override func viewDidLoad() {
