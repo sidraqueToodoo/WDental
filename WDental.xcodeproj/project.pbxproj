@@ -36,6 +36,7 @@
 		925851A326EFA90A00526849 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519126EFA90A00526849 /* Montserrat-Regular.ttf */; };
 		925851A426EFA90A00526849 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519226EFA90A00526849 /* Montserrat-Italic.ttf */; };
 		925851A526EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519326EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf */; };
+		92CDBA9226FB7D6F00FB9ADE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDBA9126FB7D6F00FB9ADE /* HomeViewController.swift */; };
 		92ED4AAB26F40A4C00C70D62 /* FirstAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */; };
 		F6737A963756D78CB1DA7C2A /* Pods_WDental.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63875507A5DC5A9F13065959 /* Pods_WDental.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		9258519126EFA90A00526849 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		9258519226EFA90A00526849 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		9258519326EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		92CDBA9126FB7D6F00FB9ADE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAccessViewController.swift; sourceTree = "<group>"; };
 		A1173A6DBB976540077ACCB7 /* Pods-WDental.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDental.release.xcconfig"; path = "Target Support Files/Pods-WDental/Pods-WDental.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +175,7 @@
 				92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */,
 				923ADDFB26F61637008CAA99 /* ResendPasswordViewController.swift */,
 				923ADDFF26F657E8008CAA99 /* PasswordResentViewController.swift */,
+				92CDBA9126FB7D6F00FB9ADE /* HomeViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				9258516C26EF8B5800526849 /* AppDelegate.swift in Sources */,
 				923ADE0026F657E8008CAA99 /* PasswordResentViewController.swift in Sources */,
 				923ADDFC26F61637008CAA99 /* ResendPasswordViewController.swift in Sources */,
+				92CDBA9226FB7D6F00FB9ADE /* HomeViewController.swift in Sources */,
 				92ED4AAB26F40A4C00C70D62 /* FirstAccessViewController.swift in Sources */,
 				9258516E26EF8B5800526849 /* SceneDelegate.swift in Sources */,
 				9218B54826F8F3D90076DC3A /* Login.swift in Sources */,
