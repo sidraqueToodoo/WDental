@@ -67,7 +67,7 @@ class ResendPasswordViewController: UIViewController {
           viewModel.didFinishFetch = {
             print(self.viewModel.userID!)
             print(self.viewModel.title!)
-            self.lbCpf.text = (self.viewModel.title!)
+            self.lbEmail.text = (self.viewModel.title!)
           }
     }
     
