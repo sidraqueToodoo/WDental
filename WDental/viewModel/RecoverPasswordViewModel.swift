@@ -1,18 +1,17 @@
 //
-//  LoginViewModel.swift
+//  RecoverPasswordViewModel.swift
 //  WDental
 //
-//  Created by Sidraque on 20/09/21.
+//  Created by Sidraque on 24/09/21.
 //
 
 import Foundation
-import CryptoKit
 
-class LoginViewModel {
+class RecoverPasswordViewModel {
     // MARK: - Properties
-    private var login: Login? {
+    private var recoverPassword: RecoverPassword? {
         didSet {
-            guard let p = login else { return }
+            guard let p = recoverPassword else { return }
             self.setupText(with: p)
             self.didFinishFetch?()
         }
@@ -26,8 +25,6 @@ class LoginViewModel {
     
     var userID: String?
     var title: String?
-    var body: String?
-    var token: String?
     
     private var dataService: DataService?
     
@@ -42,8 +39,8 @@ class LoginViewModel {
     }
     
     // MARK: - Network call
-    func fetchLogin(withId id: Int) {
-        self.dataService?.requestFetchLogin(with: id, completion: { (login, error) in
+    func fetchRecoverPassword(withId id: Int) {
+        self.dataService?.requestFetchRecoverPassword(with: id, completion: { (recoverPassword, error) in
             if let error = error {
                 self.error = error
                 self.isLoading = false
@@ -52,20 +49,16 @@ class LoginViewModel {
             self.isLoading = true
             self.error = nil
             self.isLoading = false
-            self.login = login
+            self.recoverPassword = recoverPassword
         })
     }
-
+    
     // MARK: - UI Logic
-    private func setupText(with login: Login) {
-        if let userId = login.userID, let title = login.title, let body = login.body{
+    private func setupText(with recoverPassword: RecoverPassword) {
+        if let userId = recoverPassword.userId, let title = recoverPassword.title{
             self.userID = "UserID: \(userId)"
-            self.title = "Title : \(title)"
-            self.body = "Body : \(body)"
+            self.title = "Título: \(title)"
         }
-
-        let token = Insecure.MD5.hash(data: ("\(String(login.title!))\(String(login.body!))".data(using: .utf8)!))
-        self.token = "Token: \(token)"
     }
     
     

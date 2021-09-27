@@ -9,6 +9,8 @@ import UIKit
 
 class FirstAccessViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     
     @IBOutlet weak var lbCpf: UILabel!
     @IBOutlet weak var tfCpf: UITextField!
@@ -34,11 +36,64 @@ class FirstAccessViewController: UIViewController, UIScrollViewDelegate, UITextF
     @IBOutlet weak var tfConfirmPassword: UITextField!
     @IBOutlet weak var ivCheckConfirmPassword: UIImageView!
     
+    // MARK: - Injection
+    let viewModel = RegisterViewModel(dataService: DataService.shared)
     
-    
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        activityIndicator.hidesWhenStopped = true
+    }
+    
+    // MARK: - Networking
+    private func attemptFetchRegister(withId id: Int) {
+          viewModel.fetchRegister(withId: id)
+          
+          viewModel.updateLoadingStatus = {
+              let _ = self.viewModel.isLoading ? self.activityIndicatorStart() : self.activityIndicatorStop()
+          }
+          
+          viewModel.showAlertClosure = {
+              if let error = self.viewModel.error {
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+
+                alert.addAction(UIAlertAction(title: "Voltar", style: UIAlertAction.Style.cancel, handler: { _ in
+                }))
+                self.present(alert, animated: true, completion: nil)
+              }
+          }
+          
+          viewModel.didFinishFetch = {
+            print(self.viewModel.postID!)
+            print(self.viewModel.name!)
+            print(self.viewModel.email!)
+            print(self.viewModel.body!)
+          }
+    }
+    
+    
+    // MARK: - UI Setup
+    private func activityIndicatorStart() {
+        activityIndicator.startAnimating()
+        print("start")
+    }
+    
+    private func activityIndicatorStop() {
+        let alert = UIAlertController(title: "Cadastrado com sucesso", message: "Volte para tela de login", preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: "Ir para Login", style: UIAlertAction.Style.default, handler: { _ in
+            self.performSegue(withIdentifier: "loginSegue", sender: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+        print("stop")
+        
+    }
+    
+    
+    @IBAction func actionRegister(_ sender: UIButton) {
+        attemptFetchRegister(withId: 15)
     }
     
     

@@ -9,7 +9,6 @@ import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate{
 
-    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tfCpf: UITextField!{
         didSet{
@@ -47,7 +46,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var lbPassword: UILabel!
     
     // MARK: - Injection
-    let viewModel = LoginViewModel(dataService: DataService.shared)
+    let viewModel = LoginViewModel(dataService: DataService())
+    let service = DataService()
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -74,9 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
           }
           
           viewModel.didFinishFetch = {
-            print(self.viewModel.userID!)
-            print(self.viewModel.title!)
-            print(self.viewModel.body!)
+            print(self.viewModel.token!)
           }
     }
     
@@ -94,7 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
     
     
     @IBAction func actionLogin(_ sender: UIButton) {
-        attemptFetchLogin(withId: 15)
+        attemptFetchLogin(withId: 5)
     }
     
     
@@ -121,8 +119,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 
             let cursorPosition = tfCpf.offset(from: tfCpf.beginningOfDocument, to: selectedRange.start)
             
-            print ("\(cursorPosition)")
-
             var appendString = ""
 
             switch cursorPosition {
@@ -146,16 +142,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
 
     }
     
-    
-    
     @IBAction func clearCpf(_ sender: UITextField) {
         if  tfCpf.text?.isEmpty == false {
             tfCpf.text = nil
         }
     }
-    
-
-
 
     @IBAction func checkPasswordCpf(_ sender: UITextField) {
         if  tfPassword.text?.isEmpty == false {
@@ -169,4 +160,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate{
         }
     }
 
+    
+    
+    
+    
 }
