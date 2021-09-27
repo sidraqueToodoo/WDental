@@ -1,18 +1,17 @@
 //
-//  LoginViewModel.swift
+//  RegisterViewModel.swift
 //  WDental
 //
-//  Created by Sidraque on 20/09/21.
+//  Created by Sidraque on 23/09/21.
 //
 
 import Foundation
-import CryptoKit
 
-class LoginViewModel {
+class RegisterViewModel {
     // MARK: - Properties
-    private var login: Login? {
+    private var register: Register? {
         didSet {
-            guard let p = login else { return }
+            guard let p = register else { return }
             self.setupText(with: p)
             self.didFinishFetch?()
         }
@@ -24,10 +23,10 @@ class LoginViewModel {
         didSet { self.updateLoadingStatus?() }
     }
     
-    var userID: String?
-    var title: String?
+    var postID: String?
+    var name: String?
+    var email: String?
     var body: String?
-    var token: String?
     
     private var dataService: DataService?
     
@@ -42,8 +41,8 @@ class LoginViewModel {
     }
     
     // MARK: - Network call
-    func fetchLogin(withId id: Int) {
-        self.dataService?.requestFetchLogin(with: id, completion: { (login, error) in
+    func fetchRegister(withId id: Int) {
+        self.dataService?.requestFetchRegister(with: id, completion: { (register, error) in
             if let error = error {
                 self.error = error
                 self.isLoading = false
@@ -52,20 +51,18 @@ class LoginViewModel {
             self.isLoading = true
             self.error = nil
             self.isLoading = false
-            self.login = login
+            self.register = register
         })
     }
-
+    
     // MARK: - UI Logic
-    private func setupText(with login: Login) {
-        if let userId = login.userID, let title = login.title, let body = login.body{
-            self.userID = "UserID: \(userId)"
-            self.title = "Title : \(title)"
-            self.body = "Body : \(body)"
+    private func setupText(with register: Register) {
+        if let postId = register.postID, let name = register.name, let email = register.email, let body = register.body{
+            self.postID = "PostID: \(postId)"
+            self.name = "Name: \(name)"
+            self.email = "E-mail: \(email)"
+            self.body = "Body: \(body)"
         }
-
-        let token = Insecure.MD5.hash(data: ("\(String(login.title!))\(String(login.body!))".data(using: .utf8)!))
-        self.token = "Token: \(token)"
     }
     
     

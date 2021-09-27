@@ -12,7 +12,6 @@
 		9218B54A26F9012C0076DC3A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9218B54926F9012C0076DC3A /* LoginViewModel.swift */; };
 		921EB1CA26F0E7FF00E087C8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921EB1C926F0E7FF00E087C8 /* LoginViewController.swift */; };
 		923ADDFC26F61637008CAA99 /* ResendPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ADDFB26F61637008CAA99 /* ResendPasswordViewController.swift */; };
-		923ADE0026F657E8008CAA99 /* PasswordResentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923ADDFF26F657E8008CAA99 /* PasswordResentViewController.swift */; };
 		9258516C26EF8B5800526849 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258516B26EF8B5800526849 /* AppDelegate.swift */; };
 		9258516E26EF8B5800526849 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9258516D26EF8B5800526849 /* SceneDelegate.swift */; };
 		9258517326EF8B5800526849 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9258517126EF8B5800526849 /* Main.storyboard */; };
@@ -36,6 +35,10 @@
 		925851A326EFA90A00526849 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519126EFA90A00526849 /* Montserrat-Regular.ttf */; };
 		925851A426EFA90A00526849 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519226EFA90A00526849 /* Montserrat-Italic.ttf */; };
 		925851A526EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9258519326EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf */; };
+		925FC16426FD17BC001CD899 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FC16326FD17BC001CD899 /* Register.swift */; };
+		925FC16626FD18DB001CD899 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FC16526FD18DB001CD899 /* RegisterViewModel.swift */; };
+		925FC16826FDF28D001CD899 /* RecoverPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FC16726FDF28D001CD899 /* RecoverPassword.swift */; };
+		925FC16A26FE45B8001CD899 /* RecoverPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FC16926FE45B8001CD899 /* RecoverPasswordViewModel.swift */; };
 		92CDBA9226FB7D6F00FB9ADE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CDBA9126FB7D6F00FB9ADE /* HomeViewController.swift */; };
 		92ED4AAB26F40A4C00C70D62 /* FirstAccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */; };
 		F6737A963756D78CB1DA7C2A /* Pods_WDental.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63875507A5DC5A9F13065959 /* Pods_WDental.framework */; };
@@ -49,7 +52,6 @@
 		9218B54926F9012C0076DC3A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		921EB1C926F0E7FF00E087C8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		923ADDFB26F61637008CAA99 /* ResendPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResendPasswordViewController.swift; sourceTree = "<group>"; };
-		923ADDFF26F657E8008CAA99 /* PasswordResentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResentViewController.swift; sourceTree = "<group>"; };
 		9258516826EF8B5800526849 /* WDental.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WDental.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9258516B26EF8B5800526849 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9258516D26EF8B5800526849 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,10 @@
 		9258519126EFA90A00526849 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		9258519226EFA90A00526849 /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
 		9258519326EFA90A00526849 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		925FC16326FD17BC001CD899 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		925FC16526FD18DB001CD899 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		925FC16726FDF28D001CD899 /* RecoverPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassword.swift; sourceTree = "<group>"; };
+		925FC16926FE45B8001CD899 /* RecoverPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPasswordViewModel.swift; sourceTree = "<group>"; };
 		92CDBA9126FB7D6F00FB9ADE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAccessViewController.swift; sourceTree = "<group>"; };
 		A1173A6DBB976540077ACCB7 /* Pods-WDental.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDental.release.xcconfig"; path = "Target Support Files/Pods-WDental/Pods-WDental.release.xcconfig"; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				9218B54726F8F3D90076DC3A /* Login.swift */,
+				925FC16326FD17BC001CD899 /* Register.swift */,
+				925FC16726FDF28D001CD899 /* RecoverPassword.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -123,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				9218B54926F9012C0076DC3A /* LoginViewModel.swift */,
+				925FC16526FD18DB001CD899 /* RegisterViewModel.swift */,
+				925FC16926FE45B8001CD899 /* RecoverPasswordViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -174,7 +184,6 @@
 				921EB1C926F0E7FF00E087C8 /* LoginViewController.swift */,
 				92ED4AAA26F40A4C00C70D62 /* FirstAccessViewController.swift */,
 				923ADDFB26F61637008CAA99 /* ResendPasswordViewController.swift */,
-				923ADDFF26F657E8008CAA99 /* PasswordResentViewController.swift */,
 				92CDBA9126FB7D6F00FB9ADE /* HomeViewController.swift */,
 			);
 			path = controller;
@@ -355,11 +364,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				921EB1CA26F0E7FF00E087C8 /* LoginViewController.swift in Sources */,
+				925FC16426FD17BC001CD899 /* Register.swift in Sources */,
 				9218B54626F8EDDE0076DC3A /* DataService.swift in Sources */,
 				9258516C26EF8B5800526849 /* AppDelegate.swift in Sources */,
-				923ADE0026F657E8008CAA99 /* PasswordResentViewController.swift in Sources */,
 				923ADDFC26F61637008CAA99 /* ResendPasswordViewController.swift in Sources */,
+				925FC16826FDF28D001CD899 /* RecoverPassword.swift in Sources */,
 				92CDBA9226FB7D6F00FB9ADE /* HomeViewController.swift in Sources */,
+				925FC16A26FE45B8001CD899 /* RecoverPasswordViewModel.swift in Sources */,
+				925FC16626FD18DB001CD899 /* RegisterViewModel.swift in Sources */,
 				92ED4AAB26F40A4C00C70D62 /* FirstAccessViewController.swift in Sources */,
 				9258516E26EF8B5800526849 /* SceneDelegate.swift in Sources */,
 				9218B54826F8F3D90076DC3A /* Login.swift in Sources */,

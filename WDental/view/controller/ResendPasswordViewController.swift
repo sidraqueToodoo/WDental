@@ -9,6 +9,18 @@ import UIKit
 
 class ResendPasswordViewController: UIViewController {
     
+    //MARK:- View 2
+    @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var lbEmail: UILabel!
+    @IBOutlet weak var btHome: UIButton!{
+        didSet{
+            btHome.layer.borderColor = UIColor(red: 0.07, green: 0.10, blue: 0.24, alpha: 1.00).cgColor
+            btHome.layer.borderWidth = 1
+            btHome.layer.cornerRadius = 20
+        }
+    }
+    //MARK:- View 1
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var lbCpf: UILabel!
     @IBOutlet weak var tfCpf: UITextField!
     @IBOutlet weak var ivCheckCpf: UIImageView!
@@ -19,11 +31,60 @@ class ResendPasswordViewController: UIViewController {
     
     @IBOutlet weak var btResendPassword: UIButton!
     
+    // MARK: - Injection
+    let viewModel = RecoverPasswordViewModel(dataService: DataService.shared)
+    
+    // MARK: - View life cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.hidesWhenStopped = true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    
+    
+    // MARK: - Networking
+    private func attemptFetchRecoverPassword(withId id: Int) {
+          viewModel.fetchRecoverPassword(withId: id)
+          
+          viewModel.updateLoadingStatus = {
+              let _ = self.viewModel.isLoading ? self.activityIndicatorStart() : self.activityIndicatorStop()
+          }
+          
+          viewModel.showAlertClosure = {
+              if let error = self.viewModel.error {
+                let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+
+                alert.addAction(UIAlertAction(title: "Voltar", style: UIAlertAction.Style.cancel, handler: { _ in
+                }))
+                self.present(alert, animated: true, completion: nil)
+              }
+          }
+          
+          viewModel.didFinishFetch = {
+            print(self.viewModel.userID!)
+            print(self.viewModel.title!)
+            self.lbCpf.text = (self.viewModel.title!)
+          }
+    }
+    
+    
+    // MARK: - UI Setup
+    private func activityIndicatorStart() {
+        activityIndicator.startAnimating()
+        print("start")
+    }
+    
+    private func activityIndicatorStop() {
+        view2.isHidden = false
+        print("stop")
+    }
+    
+    @IBAction func actionRecover(_ sender: UIButton) {
+        attemptFetchRecoverPassword(withId: 15)
     }
     
     @IBAction func changedTextFields(_ sender: UITextField) {
